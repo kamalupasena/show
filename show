@@ -1,0 +1,10 @@
+#!/bin/bash      
+
+if [ "$1" = "YES" ]
+then
+    defaults write com.apple.finder AppleShowAllFiles YES
+else
+    defaults write com.apple.finder AppleShowAllFiles NO
+fi
+
+killall Finder
