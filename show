@@ -3,8 +3,10 @@
 if [ "$1" = "YES" ]
 then
     defaults write com.apple.finder AppleShowAllFiles YES
-else
+    killall Finder
+elif [ "$1" = "NO" ]
+then
     defaults write com.apple.finder AppleShowAllFiles NO
+    killall Finder
 fi
 
-killall Finder
